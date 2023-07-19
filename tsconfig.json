@@ -11,6 +11,12 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
+    "paths": {
+      "ngx-ap-autounsubscribe": [
+        "dist/ngx-ap-autounsubscribe/ngx-ap-autounsubscribe",
+        "dist/ngx-ap-autounsubscribe"
+      ]
+    },
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
