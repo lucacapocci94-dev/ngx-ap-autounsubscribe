@@ -1,9 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
-import {
-  AutoUnsubscribe
-} from '../../../../ngx-ap-autounsubscribe/src/lib/AutoUnsubscribe.decorator';
 import {interval, Subscription} from 'rxjs';
+import {AutoUnsubscribe} from '../../../../ngx-ap-autounsubscribe/src/lib/AutoUnsubscribe.decorator';
 
 @AutoUnsubscribe({
   blackList: ['blackListSubscription'],
