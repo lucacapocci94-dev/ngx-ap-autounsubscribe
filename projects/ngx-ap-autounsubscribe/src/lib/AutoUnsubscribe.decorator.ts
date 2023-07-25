@@ -17,7 +17,7 @@ interface IParam {
   event?: string;
 }
 
-export function AutoUnsubscribe(param: IParam) {
+export function AutoUnsubscribe(param?: IParam) {
   return function(constructor: Function) {
     const event = param?.event ?? 'ngOnDestroy';
 
@@ -27,14 +27,14 @@ export function AutoUnsubscribe(param: IParam) {
     constructor.prototype[event] = function() {
       isFunction(original) && original.apply(this, arguments);
 
-      if (param.arrayName) {
-        doUnsubscribeIfArray(this[param.arrayName]);
+      if (param?.arrayName) {
+        doUnsubscribeIfArray(this[param?.arrayName]);
         return;
       }
 
       for (let propName in this) {
         // @ts-ignore
-        if (param?.blackList.includes(propName)) continue;
+        if (param?.blackList?.includes(propName)) continue;
 
         const property = this[propName];
         doUnsubscribe(property);
