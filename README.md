@@ -58,4 +58,4 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ## Contributing
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+To get more help on this project use go check out the [NgxApAutounsubscribe](https://github.com/aparzi/ngx-ap-autounsubscribe) page.
