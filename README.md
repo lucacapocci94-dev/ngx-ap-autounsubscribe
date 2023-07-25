@@ -1,27 +1,61 @@
 # NgxApAutounsubscribe
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
+This project is compatible with Angular 13+ versions.
 
-## Development server
+<b>Class decorator that will automatically unsubscribe from observable subscriptions when the component is destroyed without implement ngOnDestroy lifecycle.</b>
 
+## Installation
+
+Install this package with npm, with following command: <br>
+<code>npm install ngx-ap-autounsubscribe</code>
+
+### Usage
+```
+import { AutoUnsubscribe } from "ngx-ap-auto-unsubscribe";
+
+@AutoUnsubscribe()
+export class ExampleComponent {
+  testSubscription: Subscription;
+
+  ngOnInit() {
+    this.testSubscription = Observable.interval.subscribe(data => // do something);
+  }
+}
+```
+
+### Options
+
+<table>
+<thead>
+  <tr>
+    <td>Option</td>
+    <td>Description</td>
+    <td>Default value</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>arrayName</td>
+    <td>unsubscribe from subscriptions only in specified array</td>
+    <td>undefined</td>
+  </tr>
+  <tr>
+    <td>blacklist</td>
+    <td>an array of properties to exclude</td>
+    <td>undefined</td>
+  </tr>
+  <tr>
+    <td>event</td>
+    <td>a name of event callback to execute on</td>
+    <td>undefined</td>
+  </tr>
+</tbody>
+</table>
+
+
+## Start Local Environment
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
+## Contributing
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

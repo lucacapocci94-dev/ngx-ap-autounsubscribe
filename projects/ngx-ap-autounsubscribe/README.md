@@ -1,24 +1,61 @@
 # NgxApAutounsubscribe
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+This project is compatible with Angular 13+ versions.
 
-## Code scaffolding
+<b>Class decorator that will automatically unsubscribe from observable subscriptions when the component is destroyed without implement ngOnDestroy lifecycle.</b>
 
-Run `ng generate component component-name --project ngx-ap-autounsubscribe` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-ap-autounsubscribe`.
-> Note: Don't forget to add `--project ngx-ap-autounsubscribe` or else it will be added to the default project in your `angular.json` file. 
+## Installation
 
-## Build
+Install this package with npm, with following command: <br>
+<code>npm install ngx-ap-autounsubscribe</code>
 
-Run `ng build ngx-ap-autounsubscribe` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Usage
+```
+import { AutoUnsubscribe } from "ngx-ap-auto-unsubscribe";
 
-## Publishing
+@AutoUnsubscribe()
+export class ExampleComponent {
+  testSubscription: Subscription;
 
-After building your library with `ng build ngx-ap-autounsubscribe`, go to the dist folder `cd dist/ngx-ap-autounsubscribe` and run `npm publish`.
+  ngOnInit() {
+    this.testSubscription = Observable.interval.subscribe(data => // do something);
+  }
+}
+```
 
-## Running unit tests
+### Options
 
-Run `ng test ngx-ap-autounsubscribe` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<table>
+<thead>
+  <tr>
+    <td>Option</td>
+    <td>Description</td>
+    <td>Default value</td>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>arrayName</td>
+    <td>unsubscribe from subscriptions only in specified array</td>
+    <td>undefined</td>
+  </tr>
+  <tr>
+    <td>blacklist</td>
+    <td>an array of properties to exclude</td>
+    <td>undefined</td>
+  </tr>
+  <tr>
+    <td>event</td>
+    <td>a name of event callback to execute on</td>
+    <td>undefined</td>
+  </tr>
+</tbody>
+</table>
 
-## Further help
+
+## Start Local Environment
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+## Contributing
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
