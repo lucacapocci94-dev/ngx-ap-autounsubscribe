@@ -7,11 +7,11 @@ This project is compatible with Angular 13+ versions.
 ## Installation
 
 Install this package with npm, with following command: <br>
-<code>npm install ngx-ap-autounsubscribe</code>
+<code>npm install ngx-lc-autounsubscribe</code>
 
 ### Usage
 ```
-import { AutoUnsubscribe } from "ngx-ap-auto-unsubscribe";
+import { AutoUnsubscribe } from "ngx-lc-autounsubscribe";
 
 @AutoUnsubscribe()
 export class ExampleComponent {

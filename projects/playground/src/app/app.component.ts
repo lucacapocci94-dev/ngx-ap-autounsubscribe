@@ -7,7 +7,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ngx-ap-autounsubscribe';
+  title = 'ngx-lc-autounsubscribe';
 
   constructor(private router: Router) {
   }

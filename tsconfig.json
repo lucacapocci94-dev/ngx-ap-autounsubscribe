@@ -12,9 +12,9 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "paths": {
-      "ngx-ap-autounsubscribe": [
-        "dist/ngx-ap-autounsubscribe/ngx-ap-autounsubscribe",
-        "dist/ngx-ap-autounsubscribe"
+      "ngx-lc-autounsubscribe": [
+        "dist/ngx-lc-autounsubscribe/ngx-lc-autounsubscribe",
+        "dist/ngx-lc-autounsubscribe"
       ]
     },
     "declaration": false,

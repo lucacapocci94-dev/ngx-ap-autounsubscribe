@@ -7,11 +7,11 @@ This project is compatible with Angular 13+ versions.
 ## Installation
 
 Install this package with npm, with following command: <br>
-<code>npm install ngx-ap-autounsubscribe</code>
+<code>npm install ngx-lc-autounsubscribe</code>
 
 ### Usage
 ```
-import { AutoUnsubscribe } from "ngx-ap-auto-unsubscribe";
+import { AutoUnsubscribe } from "ngx-lc-autounsubscribe";
 
 @AutoUnsubscribe()
 export class ExampleComponent {
@@ -58,4 +58,4 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ## Contributing
 
-To get more help on this project use go check out the [NgxApAutounsubscribe](https://github.com/aparzi/ngx-ap-autounsubscribe) page.
+To get more help on this project use go check out the [NgxApAutounsubscribe](https://github.com/lucacapocci94-dev/ngx-lc-autounsubscribe) page.

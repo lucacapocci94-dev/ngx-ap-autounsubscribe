@@ -90,7 +90,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngx-ap-autounsubscribe:build"
+            "browserTarget": "ngx-lc-autounsubscribe:build"
           }
         },
         "test": {
@@ -113,23 +113,23 @@
         }
       }
     },
-    "ngx-ap-autounsubscribe": {
+    "ngx-lc-autounsubscribe": {
       "projectType": "library",
-      "root": "projects/ngx-ap-autounsubscribe",
-      "sourceRoot": "projects/ngx-ap-autounsubscribe/src",
+      "root": "projects/ngx-lc-autounsubscribe",
+      "sourceRoot": "projects/ngx-lc-autounsubscribe/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/ngx-ap-autounsubscribe/ng-package.json"
+            "project": "projects/ngx-lc-autounsubscribe/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ngx-ap-autounsubscribe/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ngx-lc-autounsubscribe/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/ngx-ap-autounsubscribe/tsconfig.lib.json"
+              "tsConfig": "projects/ngx-lc-autounsubscribe/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -137,9 +137,9 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ngx-ap-autounsubscribe/src/test.ts",
-            "tsConfig": "projects/ngx-ap-autounsubscribe/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-ap-autounsubscribe/karma.conf.js"
+            "main": "projects/ngx-lc-autounsubscribe/src/test.ts",
+            "tsConfig": "projects/ngx-lc-autounsubscribe/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-lc-autounsubscribe/karma.conf.js"
           }
         }
       }

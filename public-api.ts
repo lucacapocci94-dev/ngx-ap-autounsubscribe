@@ -1,1 +1,1 @@
-export * from 'projects/ngx-ap-autounsubscribe/src/lib/AutoUnsubscribe.decorator';
+export * from 'projects/ngx-lc-autounsubscribe/src/lib/AutoUnsubscribe.decorator';
